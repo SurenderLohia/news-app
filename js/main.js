@@ -45,7 +45,7 @@ function createArticle(article) {
       <a href="${article.url}">
         <div class="card-image">
           <figure class="image is-4by3">
-            <img src="${article.urlToImage}">
+            <img crossorigin="anonymous" src="${article.urlToImage}">
           </figure>
         </div>
         <div class="card-content">
