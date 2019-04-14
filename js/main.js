@@ -14,6 +14,15 @@ window.addEventListener('load', async e => {
   sourceSelector.addEventListener('change', e => {
     updateNews(e.target.value);
   });
+
+  if('serviceWorker' in navigator) {
+    try {
+      navigator.serviceWorker.register('sw.js');
+      console.log('SW registered');
+    } catch (error) {
+      console.log('SW reg failed');
+    }
+  }
 });
 
 async function updateSources() {
